@@ -71,14 +71,12 @@ dependencies {
     // shadow jar and are provided in the lib folder of Flink
     // --------------------------------------------------------------
     implementation "org.apache.flink:flink-streaming-java_${scalaBinaryVersion}:${flinkVersion}"
-    implementation "org.apache.flink:flink-connector-kafka_${scalaBinaryVersion}:${flinkVersion}"
-
 
     // --------------------------------------------------------------
     // Dependencies that should be part of the shadow jar, e.g.
     // connectors. These must be in the flinkShadowJar configuration!
     // --------------------------------------------------------------
-    //flinkShadowJar "org.apache.flink:flink-connector-kafka_${scalaBinaryVersion}:${flinkVersion}"
+    flinkShadowJar "org.apache.flink:flink-connector-kafka_${scalaBinaryVersion}:${flinkVersion}"
 
     implementation "org.apache.logging.log4j:log4j-api:${log4jVersion}"
     implementation "org.apache.logging.log4j:log4j-core:${log4jVersion}"
