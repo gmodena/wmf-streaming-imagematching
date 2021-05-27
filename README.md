@@ -1,3 +1,5 @@
+[![Build](https://github.com/gmodena/wmf-streaming-imagematching/actions/workflows/build.yml/badge.svg)](https://github.com/gmodena/wmf-streaming-imagematching/actions/workflows/build.yml)
+
 # wmf-streaming-imagematching
 A streaming job to experiment with the Kafka `revision` topic.
 
