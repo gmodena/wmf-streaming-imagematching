@@ -34,6 +34,17 @@ Finally lunch the job with
 ./bin/flink run wmf-streaming-imagematching-0.1-SNAPSHOT.jar
 ```
 
+## View the output of a Flink job
+
+On YARN stdout is directed to the container job, and won't be visible from the cli.
+We can display container output by accessing its logs with
+```
+yarn logs -applicationId <applicationId> -containerId <containerId>
+```
+Where 
+- `<applicationId>` is the Flink cluster id returned by `yarn-session.sh`, and visible at https://yarn.wikimedia.org.
+- `<containerId>` is the container running a specific task, tha you can find in Flink's Task Manager at https://yarn.wikimedia.org/proxy/<applicationId>/#/task-manager).
+
 # Flink on YARN Quickstart
 
 A standalone cluster can be setup locally (on a stat machine atop YARN) with
